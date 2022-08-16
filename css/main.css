@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: Outfit, sans-serif;
+
+}
+
+.container {
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--Very-dark-blue-card-BG);
+}
+
+.container #img-front-cover {
+    height: 305px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.container #info-card h1 {
+    color: var(--White);
+    margin-bottom: 15px;
+}
+
+.container #info-card>p {
+    color: var();
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: var(--Very-dark-blue-line);
+
+}
+
+.container #time {
+    display: flex;
+    justify-content: space-between;
+    color: var(--Soft-blue);
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.container #time img {
+    margin-right: 10px;
+}
+
+.container #time #hour,
+#day {
+    display: flex;
+    align-items: center;
+}
+
+.container #time #hour {
+    color: var(--Cyan);
+}
+
+.container hr {
+    margin: 20px 0;
+    background-color: var(--Very-dark-blue-line);
+}
+
+.container #info-dev {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container #info-dev img {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.container #info-dev p {
+    color: var(--White);
+}
+
+.container #info-dev p span {
+    color: var(--Very-dark-blue-line);
+}
+
+@media (max-width: 350px) {
+    .container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 305px) {
+    .container {
+        width: 275px;
+    }
+}
