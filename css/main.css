@@ -11,6 +11,7 @@
 :root {
     --Soft-blue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
+    --Cyan2: hsla(178, 100%, 50%, 0.527);
     --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
     --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
     --Very-dark-blue-line: hsl(215, 32%, 27%);
@@ -40,14 +41,52 @@ body {
 }
 
 .container #img-front-cover {
+    position: relative;
     height: 305px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
+.container figure {
+    position: relative;
+}
+
+.container figure figcaption {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cyan2);
+    border-radius: 15px;
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+.container figure figcaption #preview-img {
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icon-view.svg");
+}
+
+
+.container figure:hover figcaption {
+    opacity: 1;
+}
+
 .container #info-card h1 {
     color: var(--White);
     margin-bottom: 15px;
+}
+
+.container #info-card h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+
 }
 
 .container #info-card>p {
@@ -80,11 +119,6 @@ body {
     color: var(--Cyan);
 }
 
-.container hr {
-    margin: 20px 0;
-    background-color: var(--Very-dark-blue-line);
-}
-
 .container #info-dev {
     display: flex;
     align-items: center;
@@ -100,11 +134,16 @@ body {
 }
 
 .container #info-dev p {
-    color: var(--White);
+    color: var(--Very-dark-blue-line);
 }
 
 .container #info-dev p span {
-    color: var(--Very-dark-blue-line);
+    color: var(--White);
+}
+
+.container #info-dev p span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
 }
 
 @media (max-width: 350px) {
